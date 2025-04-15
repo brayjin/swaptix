@@ -1,0 +1,83 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2A2D5F;
+  --color-secondary: #5E2A76;
+  --color-accent-turquoise: #40E0D0;
+  --color-accent-pink: #FF36AB;
+  --color-accent-yellow: #FFDE03;
+  --color-background-dark: #0F0F1A;
+  --color-background-light: #1A1A2E;
+}
+
+html, body {
+  @apply bg-background-dark text-white min-h-screen overflow-x-hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom utility classes */
+@layer components {
+  .container-app {
+    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-light hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-light hover:shadow-lg;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-turquoise text-background-dark hover:bg-opacity-90 hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-background-light rounded-xl p-6 backdrop-blur-sm shadow-xl border border-opacity-20 border-accent-turquoise;
+  }
+
+  .glow-text {
+    @apply text-accent-turquoise animate-glow;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
