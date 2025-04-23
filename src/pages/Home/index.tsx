@@ -186,7 +186,7 @@ const Home = () => {
             {[
               { title: "Buy", icon: "💸", description: "Purchase tickets from our verified sellers." },
               { title: "Resell", icon: "🔄", description: "List your unused tickets on our marketplace." },
-              { title: "Get Paid", icon: "💰", description: "Receive payment quickly and securely." }
+              { title: "Wallet", icon: "💰", description: "Receive and sent payment quickly and securely." }
             ].map((step, index) => (
               <motion.div
                 key={index}
